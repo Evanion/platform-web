@@ -21,8 +21,6 @@
     "analyze": "yarn build && source-map-explorer build/static/js/main.*",
     "test:coverage": "react-scripts test --coverage",
     "test:storybook": "react-scripts test --env=jsdom --json --outputFile=jest-test-results.json",
-    "test:integration": "cypress open",
-    "ci:integration": "cypress run",
     "eject": "react-scripts eject",
     "generate": "plop",
     "storybook": "start-storybook -p 9009 -s public",
