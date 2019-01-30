@@ -2,6 +2,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Available Scripts
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/Evanion/platform-web.svg)](https://greenkeeper.io/)
+
 In the project directory, you can run:
 
 ### `npm start`
