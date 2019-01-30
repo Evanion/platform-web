@@ -1,0 +1,29 @@
+import React from 'react';
+import { storiesOf } from '@storybook/react';
+import {MemoryRouter, Route} from 'react-router-dom';
+import {{{pascalCase name}}} from './{{{pascalCase name}}}';
+{{#if i18n}}
+import { IntlProvider } from 'react-intl';
+const intlProps = { locale: 'en' };
+{{/if}}
+
+{{#if child}}
+storiesOf('Routes/{{{parent}}}/Routes/{{{pascalCase name}}}', module)
+{{else}}
+storiesOf('Routes/{{{pascalCase name}}}', module)
+{{/if}}
+  .addParameters({ jest: ['{{{pascalCase name}}}'] })
+  .add('View', () => (
+{{#if i18n}}
+    <IntlProvider {...intlProps}>
+      <MemoryRouter>
+        <Route component={ {{{pascalCase name}}} }/>
+      </MemoryRouter>
+    </IntlProvider>
+{{else}}
+    <MemoryRouter>
+      <Route component={ {{{pascalCase name}}} }/>
+    </MemoryRouter>
+{{/if}}
+  ));
+

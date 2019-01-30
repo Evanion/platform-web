@@ -1,8 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import './index.scss';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+
+// eslint-disable-next-line
+const consoleError = console.error.bind(console);
+// eslint-disable-next-line
+console.error = (message: any, ...args: any) => {
+  if (
+    typeof message === 'string' &&
+    message.startsWith('[React Intl] Missing message:')
+  ) {
+    return;
+  }
+  consoleError(message, ...args);
+};
 
 ReactDOM.render(<App />, document.getElementById('root'));
 

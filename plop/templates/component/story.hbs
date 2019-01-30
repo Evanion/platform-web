@@ -1,0 +1,14 @@
+import React from 'react';
+import { storiesOf } from '@storybook/react';
+
+import {{{pascalCase name}}} from './{{{pascalCase name}}}';
+
+{{#if shared}}
+storiesOf('Components/{{{pascalCase name}}}', module)
+  .addParameters({ jest: ['{{{pascalCase name}}}'] })
+  .add('Basic', () => <{{{pascalCase name}}} />);
+{{else}}
+storiesOf('Routes/{{{parent}}}/Components', module)
+  .addParameters({ jest: ['{{{pascalCase name}}}'] })
+  .add('{{{pascalCase name}}}', () => <{{{pascalCase name}}} />);
+{{/if}}

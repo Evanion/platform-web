@@ -1,0 +1,6 @@
+{{#if lazy}}
+const {{{pascalCase name}}} = React.lazy(() => import('./{{{pascalCase name}}}'));
+{{else}}
+import {{pascalCase name}} from './{{pascalCase name}}';
+{{/if}}
+$1

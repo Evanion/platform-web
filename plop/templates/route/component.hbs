@@ -1,0 +1,21 @@
+import React from 'react';
+import { RouteComponentProps } from 'react-router-dom';{{#if i18n}}
+import { FormattedMessage } from 'react-intl';
+import messages from './messages';
+{{/if}}{{#if scss}}
+import './{{{pascalCase name}}}.scss';
+{{/if}}
+
+interface Props extends RouteComponentProps {
+  [key: string]: any;
+}
+
+export default class {{{pascalCase name}}} extends React.Component<Props> {
+  public render() {
+    return (
+      <div data-test="{{{kebabCase name}}}-page" className={'{{{kebabCase name}}}-page'}>
+        {{#if i18n}}<FormattedMessage {...messages.title} />{{else}}{{name}}{{/if}}
+      </div>
+    );
+  }
+}

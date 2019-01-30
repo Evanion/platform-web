@@ -1,0 +1,6 @@
+{{#if child}}
+states.{{upperCase parent}}_{{upperCase name}} = `${states.{{upperCase parent}} }{{url}}`;
+{{else}}
+states.{{upperCase name}} = '{{url}}';
+{{/if}}
+  $1

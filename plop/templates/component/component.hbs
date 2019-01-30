@@ -1,0 +1,18 @@
+import React from 'react';
+{{#if i18n}}
+import { FormattedMessage } from 'react-intl';
+import messages from './messages';
+{{/if}}
+{{#if scss}}
+import './{{{pascalCase name}}}.scss';
+{{/if}}
+
+interface Props {
+  [key: string]: any;
+}
+
+const {{{pascalCase name}}} = (props: Props) => {
+  return <div className={'{{{kebabCase name}}}'}>{{#if i18n}}<FormattedMessage {...messages.title} />{{else}}{{name}}{{/if}}</div>;
+};
+
+export default {{{pascalCase name}}};

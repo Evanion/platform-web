@@ -3,20 +3,30 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@types/jest": "23.3.12",
-    "@types/node": "10.12.18",
-    "@types/react": "16.7.18",
-    "@types/react-dom": "16.0.11",
+    "formik": "^1.4.2",
+    "formik-semantic-ui": "^0.9.0",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
-    "react-scripts": "2.1.3",
-    "typescript": "3.2.2"
+    "react-intl": "^2.7.2",
+    "react-router-dom": "^4.3.1",
+    "react-semantic-toasts": "^0.4.1",
+    "semantic-ui-css": "^2.4.1",
+    "semantic-ui-react": "^0.84.0",
+    "yup": "^0.26.7"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "analyze": "yarn build && source-map-explorer build/static/js/main.*",
+    "test:coverage": "react-scripts test --coverage",
+    "test:storybook": "react-scripts test --env=jsdom --json --outputFile=jest-test-results.json",
+    "test:integration": "cypress open",
+    "ci:integration": "cypress run",
+    "eject": "react-scripts eject",
+    "generate": "plop",
+    "storybook": "start-storybook -p 9009 -s public",
+    "build-storybook": "build-storybook -s public"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -26,5 +36,61 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "@storybook/addon-a11y": "^4.1.6",
+    "@storybook/addon-actions": "^4.1.6",
+    "@storybook/addon-info": "^4.1.6",
+    "@storybook/addon-jest": "^4.1.6",
+    "@storybook/addon-knobs": "^4.1.6",
+    "@storybook/addon-links": "^4.1.6",
+    "@storybook/addon-viewport": "^4.1.6",
+    "@storybook/addons": "^4.1.6",
+    "@storybook/react": "^4.1.6",
+    "@types/enzyme": "^3.1.15",
+    "@types/enzyme-adapter-react-16": "^1.0.3",
+    "@types/faker": "^4.1.5",
+    "@types/jest": "23.3.12",
+    "@types/node": "10.12.18",
+    "@types/puppeteer": "^1.11.2",
+    "@types/react": "^16.7.18",
+    "@types/react-dom": "16.0.11",
+    "@types/react-intl": "^2.3.15",
+    "@types/react-router-dom": "^4.3.1",
+    "@types/react-test-renderer": "^16.0.3",
+    "@types/storybook__addon-a11y": "^3.3.1",
+    "@types/storybook__addon-actions": "^3.4.1",
+    "@types/storybook__addon-jest": "^3.4.1",
+    "@types/storybook__addon-knobs": "^4.0.0",
+    "@types/storybook__addon-links": "^3.3.3",
+    "@types/storybook__react": "^4.0.0",
+    "@types/yup": "^0.26.4",
+    "babel-loader": "^8.0.5",
+    "babel-plugin-require-context-hook": "^1.0.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "enzyme": "^3.8.0",
+    "enzyme-adapter-react-16": "^1.7.1",
+    "enzyme-to-json": "^3.3.5",
+    "faker": "^4.1.0",
+    "lodash.kebabcase": "^4.1.1",
+    "lodash.snakecase": "^4.1.1",
+    "node-sass": "^4.11.0",
+    "plop": "^2.2.0",
+    "puppeteer": "^1.11.0",
+    "react-scripts": "2.1.3",
+    "react-test-renderer": "^16.7.0",
+    "require-context.macro": "^1.0.4",
+    "source-map-explorer": "^1.6.0",
+    "typescript": "3.2.2"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{ts, tsx}",
+      "!src/**/*.story.{ts,tsx}",
+      "!src/**/index.ts",
+      "!src/**/*.d.ts",
+      "!src/Utils/TestHelper/*"
+    ]
+  }
 }

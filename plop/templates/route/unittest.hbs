@@ -1,0 +1,89 @@
+import React from 'react';
+import { shallow } from 'enzyme';
+import { MemoryRouter, Route } from 'react-router-dom';
+import puppeteer, { Browser, Page } from 'puppeteer';
+{{#if child}}
+import ROUTEMAP from '../../../../Utils/ROUTEMAP';
+{{else}}
+import ROUTEMAP from '../../Utils/ROUTEMAP';
+{{/if}}
+{{#if i18n}}
+import { IntlProvider } from 'react-intl';
+{{/if}}
+import {{{pascalCase name}}} from './{{{pascalCase name}}}';
+{{#if i18n}}
+
+const intlProps = { locale: 'en' };
+{{/if}}
+let browser: Browser;
+let page: Page;
+
+describe('{{{pascalCase name}}} Route', () => {
+  it('renders correctly', () => {
+    {{#if i18n}}
+    shallow(
+      <IntlProvider {...intlProps}>
+        <MemoryRouter>
+          <Route component={ {{{pascalCase name}}} } />
+        </MemoryRouter>
+      </IntlProvider>
+    );
+    {{else}}
+    shallow(<{{{pascalCase name}}} />);
+    {{/if}}
+  });
+});
+
+
+describe('{{{pascalCase name}}} Route E2E', () => {
+  beforeEach(async () => {
+    browser = await puppeteer.launch();
+    page = await browser.newPage();
+
+    page.emulate({
+      viewport: {
+        width: 1920,
+        height: 1080
+      },
+      userAgent: ''
+    });
+  });
+
+  afterEach(async () => {
+    await browser.close();
+  })
+
+{{#if private}}
+  it('should redirect to login if you aren\'t authenticated', async () => {
+
+    {{#if child}}
+    await page.goto(`http://localhost:3000${ROUTEMAP.{{upperCase parent}}_{{upperCase name}} }`);
+    {{else}}
+    await page.goto(`http://localhost:3000${ROUTEMAP.{{upperCase name}} }`);
+    {{/if}}
+    await page.waitForSelector('#root > div');
+
+    const url = page.url();
+
+    expect(url).toBe('http://localhost:3000/login');
+  })
+{{else}}
+  it('should display the page', async () => {
+
+    {{#if child}}
+    await page.goto(`http://localhost:3000${ROUTEMAP.{{upperCase parent}}_{{upperCase name}} }`);
+    {{else}}
+    await page.goto(`http://localhost:3000${ROUTEMAP.{{upperCase name}} }`);
+    {{/if}}
+    await page.waitForSelector('#root > div');
+
+    const url = page.url();
+
+    {{#if child}}
+    expect(url).toBe(`http://localhost:3000${ROUTEMAP.{{upperCase parent}}_{{upperCase name}} }`);
+    {{else}}
+    expect(url).toBe(`http://localhost:3000${ROUTEMAP.{{upperCase name}} }`);
+    {{/if}}
+  })
+{{/if}}
+})

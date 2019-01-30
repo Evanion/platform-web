@@ -1,0 +1,6 @@
+{{#if lazy}}
+<Route path={ ROUTEMAP.{{{upperCase name}}} } component={Load({{{pascalCase name}}})} />
+{{else}}
+<Route path={ ROUTEMAP.{{{upperCase name}}} } component={ {{{pascalCase name}}} } />
+{{/if}}
+    $1

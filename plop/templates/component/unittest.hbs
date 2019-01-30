@@ -1,0 +1,24 @@
+import React from 'react';
+import { shallow } from 'enzyme';
+{{#if i18n}}
+import { IntlProvider } from 'react-intl';
+{{/if}}
+import {{{pascalCase name}}} from './{{{pascalCase name}}}';
+{{#if i18n}}
+
+const intlProps = { locale: 'en' };
+{{/if}}
+
+describe('{{{pascalCase name}}}', () => {
+  it('renders correctly', () => {
+    {{#if i18n}}
+    shallow(
+      <IntlProvider {...intlProps}>
+        <{{{pascalCase name}}} />
+      </IntlProvider>
+    );
+    {{else}}
+    shallow(<{{{pascalCase name}}} />);
+    {{/if}}
+  });
+});

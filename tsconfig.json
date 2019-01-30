@@ -17,8 +17,16 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "preserve"
+    "jsx": "preserve",
+    "typeRoots": ["./node_modules", "./types"]
   },
+  "exclude": [
+    "plop",
+    "__mocks__",
+    "*.scss",
+    "coverage",
+    "build",
+  ],
   "include": [
     "src"
   ]
