@@ -36,7 +36,7 @@ class ForgotPasswordForm extends React.Component<Props> {
   private readonly onSubmit = async (values:any, {setSubmitting}:any) => {
     try {
       const result = await User.requestResetPassword(values);
-
+      console.log('request',result)
       toast({
         title: this.intl(messages.toastTitleSuccess), 
         description: this.intl(messages.toastMessageSuccess), 
