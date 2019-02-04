@@ -1,10 +1,10 @@
 import React from 'react';
 import { Route, Switch, Redirect, RouteComponentProps } from 'react-router-dom';
-import ROUTEMAP from '../Utils/ROUTEMAP';
+import ROUTEMAP from '../Services/ROUTEMAP';
 import Load from '../Utils/Load';
 
 import Logout from './Logout';
-import {isAuthenticated} from '../Services/User/User';
+import { isAuthenticated } from '../Services/User/User';
 import Menu from '../Components/Menu';
 import { MenuItem } from '../Components/Menu/Menu';
 /* --- route static --- */
@@ -36,15 +36,18 @@ const menuItems: MenuItem[] = [
     label: 'Logout',
     key: 'logout'
   }
-]
+];
 
-const PrivateRoutes = ({location}:Props) => {
-
+const PrivateRoutes = ({ location }: Props) => {
   if (!isAuthenticated()) {
-    return <Redirect to={{
-      pathname: ROUTEMAP.LOGIN,
-      state: { referrer: location },
-    }} />;
+    return (
+      <Redirect
+        to={{
+          pathname: ROUTEMAP.LOGIN,
+          state: { referrer: location }
+        }}
+      />
+    );
   }
 
   return (
@@ -54,15 +57,11 @@ const PrivateRoutes = ({location}:Props) => {
         {/* --- routes --- */}
         <Route path={ROUTEMAP.ACCOUNT} component={Load(Account)} />
         <Route path={ROUTEMAP.LOGOUT} component={Logout} />
-        <Route
-          exact={true}
-          path={ROUTEMAP.HOME}
-          component={Load(Dashboard)}
-        />
+        <Route exact={true} path={ROUTEMAP.HOME} component={Load(Dashboard)} />
         <Route component={Load(NotFound)} />
       </Switch>
     </React.Fragment>
   );
-}
+};
 
 export default PrivateRoutes;

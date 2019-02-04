@@ -37,9 +37,8 @@ function ROUTEMAP() {
    * forgot password - displays the first step in password recovery
    */
   states.ACCOUNT = '/account';
-  
-  /* --- route map --- */
 
+  /* --- route map --- */
 
   return states;
 }

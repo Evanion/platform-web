@@ -1,6 +1,6 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
-import ROUTEMAP from '../Utils/ROUTEMAP';
+import ROUTEMAP from '../Services/ROUTEMAP';
 import PrivateRoutes from './Routes.private';
 import Load from '../Utils/Load';
 
@@ -16,7 +16,6 @@ const Register = React.lazy(() => import('./Register'));
 const Login = React.lazy(() => import('./Login'));
 const ForgotPassword = React.lazy(() => import('./ForgotPassword'));
 /* --- route lazy --- */
-
 
 const Routes = () => (
   <Switch>
