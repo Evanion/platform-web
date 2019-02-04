@@ -5,13 +5,13 @@ import messages from './messages';
 import { Message, Icon, Header } from 'semantic-ui-react';
 import './Request.scss';
 import ForgotPasswordForm from '../../Components/ForgotPasswordForm';
-import ROUTEMAP from '../../../../Utils/ROUTEMAP';
+import ROUTEMAP from '../../../../Services/ROUTEMAP';
 import pathToRegexp from 'path-to-regexp';
 
 const ForgotPassword = (props: RouteComponentProps) => {
-  const onSuccess = (code:string) => {
-    props.history.push(pathToRegexp.compile(ROUTEMAP.RESET_PASSWORD)({code}))
-  }
+  const onSuccess = (code: string) => {
+    props.history.push(pathToRegexp.compile(ROUTEMAP.RESET_PASSWORD)({ code }));
+  };
 
   return (
     <div data-test="request-page" className={'forgot-password-request-page'}>
@@ -26,7 +26,6 @@ const ForgotPassword = (props: RouteComponentProps) => {
         </Message>
         <ForgotPasswordForm attached={true} onSuccess={onSuccess} />
       </div>
-      
     </div>
   );
 };

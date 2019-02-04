@@ -3,9 +3,9 @@ import { shallow } from 'enzyme';
 import { MemoryRouter, Route } from 'react-router-dom';
 import puppeteer, { Browser, Page } from 'puppeteer';
 {{#if child}}
-import ROUTEMAP from '../../../../Utils/ROUTEMAP';
+import ROUTEMAP from '../../../../Services/ROUTEMAP';
 {{else}}
-import ROUTEMAP from '../../Utils/ROUTEMAP';
+import ROUTEMAP from '../../Services/ROUTEMAP';
 {{/if}}
 {{#if i18n}}
 import { IntlProvider } from 'react-intl';

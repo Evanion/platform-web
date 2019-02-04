@@ -5,13 +5,15 @@ import messages from './messages';
 
 import './Dashboard.scss';
 import { Button } from 'semantic-ui-react';
-import ROUTEMAP from '../../Utils/ROUTEMAP';
+import ROUTEMAP from '../../Services/ROUTEMAP';
 
 const Dashboard = (props: RouteComponentProps) => {
   return (
     <div data-test="dashboard-page" className={'dashboard-page'}>
       <FormattedMessage {...messages.title} />
-      <Button as={Link} to={ROUTEMAP.LOGOUT}>Logout</Button>
+      <Button as={Link} to={ROUTEMAP.LOGOUT}>
+        Logout
+      </Button>
     </div>
   );
 };
