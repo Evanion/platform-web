@@ -2,6 +2,7 @@
   "name": "client-web",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://localhost:4000",
   "dependencies": {
     "formik": "^1.4.2",
     "formik-semantic-ui": "^0.9.0",
@@ -26,7 +27,8 @@
     "eject": "react-scripts eject",
     "generate": "plop",
     "storybook": "start-storybook -p 9009 -s public",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook -s public",
+    "ci:codesmell": "sonar-scanner"
   },
   "eslintConfig": {
     "extends": "react-app"
