@@ -97,7 +97,7 @@ module.exports = function(plop) {
         },
         {
           type: 'modify',
-          path: 'src/Utils/ROUTEMAP/ROUTEMAP.ts',
+          path: 'src/Services/ROUTEMAP/ROUTEMAP.ts',
           pattern: /(\/\* --- route map --- \*\/)/gi,
           templateFile: 'plop/templates/route/routemap.hbs',
         },

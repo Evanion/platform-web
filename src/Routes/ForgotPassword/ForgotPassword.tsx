@@ -1,7 +1,7 @@
 import React from 'react';
 import { RouteComponentProps, Switch, Route } from 'react-router-dom';
 import './ForgotPassword.scss';
-import ROUTEMAP from '../../Utils/ROUTEMAP';
+import ROUTEMAP from '../../Services/ROUTEMAP';
 import Request from './Routes/Request';
 import Recover from './Routes/Recover';
 
@@ -13,7 +13,6 @@ const ForgotPassword = (props: RouteComponentProps) => (
         <Route path={ROUTEMAP.FORGOT_PASSWORD} component={Request} />
       </Switch>
     </div>
-    
   </div>
 );
 
