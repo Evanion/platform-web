@@ -6,7 +6,7 @@ pipeline {
     }
   }
   environment {
-    APP_NAME = "<customer>-<project>-fe"
+    APP_NAME = "{{projectName}}-fe"
   }
   stages {
     stage('Setup') {
