@@ -1,15 +1,16 @@
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
-import { RouteComponentProps } from 'react-router-dom';
+import { RouteComponentProps, Redirect } from 'react-router-dom';
 import messages from './messages';
 import { Message, Icon, Header } from 'semantic-ui-react';
 import './Request.scss';
 import ForgotPasswordForm from '../../Components/ForgotPasswordForm';
 import ROUTEMAP from '../../../../Utils/ROUTEMAP';
+import pathToRegexp from 'path-to-regexp';
 
 const ForgotPassword = (props: RouteComponentProps) => {
-  const onSuccess = () => {
-    props.history.push(ROUTEMAP.LOGIN);
+  const onSuccess = (code:string) => {
+    props.history.push(pathToRegexp.compile(ROUTEMAP.RESET_PASSWORD)({code}))
   }
 
   return (

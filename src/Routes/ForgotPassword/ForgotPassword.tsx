@@ -1,33 +1,20 @@
 import React from 'react';
-import { FormattedMessage } from 'react-intl';
-import { RouteComponentProps } from 'react-router-dom';
-import messages from './messages';
-import { Message, Icon, Header } from 'semantic-ui-react';
+import { RouteComponentProps, Switch, Route } from 'react-router-dom';
 import './ForgotPassword.scss';
-import ForgotPasswordForm from './Components/ForgotPasswordForm';
 import ROUTEMAP from '../../Utils/ROUTEMAP';
+import Request from './Routes/Request';
+import Recover from './Routes/Recover';
 
-const ForgotPassword = (props: RouteComponentProps) => {
-  const onSuccess = () => {
-    props.history.push(ROUTEMAP.LOGIN);
-  }
-
-  return (
-    <div data-test="forgot-password-page" className={'forgot-password-page'}>
-      <div>
-        <Message attached>
-          <Message.Header>
-            <FormattedMessage {...messages.title} />
-          </Message.Header>
-          <Header.Content>
-            <FormattedMessage {...messages.description} />
-          </Header.Content>
-        </Message>
-        <ForgotPasswordForm attached={true} onSuccess={onSuccess} />
-      </div>
-      
+const ForgotPassword = (props: RouteComponentProps) => (
+  <div data-test="forgot-password-page" className={'forgot-password-page'}>
+    <div>
+      <Switch>
+        <Route path={ROUTEMAP.RESET_PASSWORD} component={Recover} />
+        <Route path={ROUTEMAP.FORGOT_PASSWORD} component={Request} />
+      </Switch>
     </div>
-  );
-};
+    
+  </div>
+);
 
 export default ForgotPassword;

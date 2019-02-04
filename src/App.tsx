@@ -5,14 +5,16 @@ import Routes from './Routes';
 import ToastContainer from './Components/Toast';
 
 const App = () => (
-  <LanguageProvider>
-    <React.Fragment>
-      <ToastContainer />
-      <BrowserRouter>
-        <Routes />
-      </BrowserRouter>
-    </React.Fragment>
-  </LanguageProvider>
+  <div className="App">
+    <LanguageProvider>
+      <React.Fragment>
+        <ToastContainer />
+        <BrowserRouter>
+          <Routes />
+        </BrowserRouter>
+      </React.Fragment>
+    </LanguageProvider>
+  </div>
 );
 
 // @ts-ignore

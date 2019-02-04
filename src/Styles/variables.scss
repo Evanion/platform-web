@@ -1,2 +1,8 @@
 
 // $dark-navbar-background-color: #050b7a;
+$breakpoint-medium: 481px;
+$breakpoint-large: 840px;
+$breakpoint-xlarge: 1025px;
+$breakpoint-small-max: $breakpoint-medium - 1;
+$breakpoint-medium-max: $breakpoint-large - 1;
+$breakpoint-large-max: $breakpoint-xlarge - 1;
