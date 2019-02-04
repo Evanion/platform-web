@@ -1,0 +1,9 @@
+.git
+.idea
+node_modules
+build
+.storybook
+plopfile.js
+coverage
+plop
+storybook-static
