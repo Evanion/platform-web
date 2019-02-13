@@ -29,7 +29,8 @@
     "ci:codesmell": "sonar-scanner",
     "prettify": "prettier --single-quote --write \"src/**/*.{js,jsx,ts,tsx,json,css,scss,md}\"",
     "lint": "tslint -p ./tsconfig.json",
-    "lint:fix": "tslint -p ./tsconfig.json --fix"
+    "lint:fix": "tslint -p ./tsconfig.json --fix",
+    "precommit": "lint-staged && npm test"
   },
   "eslintConfig": {
     "extends": "react-app"
