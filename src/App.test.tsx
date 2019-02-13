@@ -7,7 +7,3 @@ describe('App', () => {
     shallow(<App />);
   });
 });
-
-test('failing', () => {
-  expect(4).toBe(5);
-});
