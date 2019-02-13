@@ -12,5 +12,5 @@ export default defineMessages({
     id: `${scope}.resourceNotFoundMessage`,
     defaultMessage: 'The page you are looking for was not found',
     description: 'The pagetitle for NotFound',
-  }
+  },
 });

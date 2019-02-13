@@ -11,9 +11,9 @@ describe('Register', () => {
     shallow(
       <IntlProvider {...intlProps}>
         <MemoryRouter>
-          <Route component={ Register } />
+          <Route component={Register} />
         </MemoryRouter>
-      </IntlProvider>
+      </IntlProvider>,
     );
   });
 });

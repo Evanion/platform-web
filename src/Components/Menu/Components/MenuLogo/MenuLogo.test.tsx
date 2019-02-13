@@ -9,8 +9,8 @@ describe('MenuLogo', () => {
     ReactDOM.render(
       <MemoryRouter>
         <MenuLogo path={'/'} label={'test'} />
-      </MemoryRouter>, 
-      div
+      </MemoryRouter>,
+      div,
     );
   });
 });

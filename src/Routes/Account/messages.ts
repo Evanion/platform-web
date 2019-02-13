@@ -7,5 +7,5 @@ export default defineMessages({
     id: `${scope}.PageTitle`,
     defaultMessage: 'Account is used to administer your account',
     description: 'The pagetitle for Account',
-  }
+  },
 });

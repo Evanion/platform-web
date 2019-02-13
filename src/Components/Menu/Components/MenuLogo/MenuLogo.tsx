@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import {Menu} from 'semantic-ui-react';
+import { Menu } from 'semantic-ui-react';
 
 interface Props {
   label: string;
@@ -9,7 +9,11 @@ interface Props {
 }
 
 const Logo = (props: Props) => {
-  return <Menu.Item as={Link} to={props.path} header>{props.label}</Menu.Item>;
+  return (
+    <Menu.Item as={Link} to={props.path} header>
+      {props.label}
+    </Menu.Item>
+  );
 };
 
 export default Logo;

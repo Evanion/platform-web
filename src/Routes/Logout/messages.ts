@@ -11,11 +11,13 @@ export default defineMessages({
   toastTitle: {
     id: `${scope}.ToastTitle`,
     defaultMessage: 'Logout',
-    description: 'The title for the toast message that the user have been logged out',
+    description:
+      'The title for the toast message that the user have been logged out',
   },
   toastDescription: {
     id: `${scope}.ToastDescription`,
     defaultMessage: 'You have been logged out',
-    description: 'The description for the toast message that the user have been logged out',
-  }
+    description:
+      'The description for the toast message that the user have been logged out',
+  },
 });

@@ -21,7 +21,7 @@ class RegisterForm extends React.Component<Props> {
     validateFieldRequired: this.intl(messages.validateFieldRequired),
     validateEmailError: this.intl(messages.validateEmailError),
     validateConfirmPasswordError: this.intl(
-      messages.validateConfirmPasswordError
+      messages.validateConfirmPasswordError,
     ),
     validatePasswordShort: this.intl(messages.validatePasswordShort),
     fieldLabelDisplayName: this.intl(messages.fieldLabelDisplayName),
@@ -31,7 +31,7 @@ class RegisterForm extends React.Component<Props> {
     toastTitleSuccess: this.intl(messages.toastTitleSuccess),
     toastMessageSuccess: this.intl(messages.toastMessageSuccess),
     toastTitleError: this.intl(messages.toastTitleError),
-    toastMessageError: this.intl(messages.toastMessageError)
+    toastMessageError: this.intl(messages.toastMessageError),
   };
 
   private readonly validate = Yup.object().shape({
@@ -44,30 +44,30 @@ class RegisterForm extends React.Component<Props> {
       .required(this.messages.validateFieldRequired),
     confirmPassword: Yup.string()
       .oneOf([Yup.ref('password')], this.messages.validateConfirmPasswordError)
-      .required(this.messages.validateFieldRequired)
+      .required(this.messages.validateFieldRequired),
   });
 
   private readonly formSchema = {
     displayName: {
       type: 'text',
       required: true,
-      label: this.messages.fieldLabelDisplayName
+      label: this.messages.fieldLabelDisplayName,
     },
     email: {
       type: 'email',
       required: true,
-      label: this.messages.fieldLabelEmail
+      label: this.messages.fieldLabelEmail,
     },
     password: {
       type: 'password',
       required: true,
-      label: this.messages.fieldLabelPassword
+      label: this.messages.fieldLabelPassword,
     },
     confirmPassword: {
       type: 'password',
       required: true,
-      label: this.messages.fieldLabelConfirmPassword
-    }
+      label: this.messages.fieldLabelConfirmPassword,
+    },
   };
 
   private readonly onSubmit = async (values: any, { setSubmitting }: any) => {
@@ -78,7 +78,7 @@ class RegisterForm extends React.Component<Props> {
         title: this.messages.toastTitleSuccess,
         description: this.messages.toastMessageSuccess,
         icon: 'user',
-        type: 'success'
+        type: 'success',
       });
 
       this.props.onSuccess(result);
@@ -87,7 +87,7 @@ class RegisterForm extends React.Component<Props> {
         title: this.messages.toastTitleError,
         description: this.messages.toastMessageError,
         icon: 'user',
-        type: 'error'
+        type: 'error',
       });
       if (typeof this.props.onError === 'function') {
         this.props.onError(error);

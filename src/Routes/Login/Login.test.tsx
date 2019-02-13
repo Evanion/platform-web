@@ -1,7 +1,7 @@
 import React from 'react';
 import { MemoryRouter, Route } from 'react-router-dom';
 import { IntlProvider } from 'react-intl';
-import Login from '../Login';
+import Login from './Login';
 import { shallow } from 'enzyme';
 
 const intlProps = { locale: 'en' };
@@ -13,7 +13,7 @@ describe('<Login />', () => {
         <MemoryRouter>
           <Route component={Login} />
         </MemoryRouter>
-      </IntlProvider>
+      </IntlProvider>,
     );
   });
 });

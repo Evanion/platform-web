@@ -12,10 +12,10 @@ describe('Account', () => {
     ReactDOM.render(
       <IntlProvider {...intlProps}>
         <MemoryRouter>
-          <Route component={ Account } />
+          <Route component={Account} />
         </MemoryRouter>
       </IntlProvider>,
-      div
+      div,
     );
   });
 });

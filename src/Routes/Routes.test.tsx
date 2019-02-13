@@ -13,7 +13,7 @@ describe('<Routes />', () => {
         <MemoryRouter>
           <Routes />
         </MemoryRouter>
-      </IntlProvider>
+      </IntlProvider>,
     );
   });
 });

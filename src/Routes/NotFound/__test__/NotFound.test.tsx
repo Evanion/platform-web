@@ -13,7 +13,7 @@ describe('<NotFound />', () => {
         <MemoryRouter>
           <Route component={NotFound} />
         </MemoryRouter>
-      </IntlProvider>
+      </IntlProvider>,
     );
   });
 });

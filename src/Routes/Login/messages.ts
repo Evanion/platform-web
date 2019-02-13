@@ -10,12 +10,12 @@ export default defineMessages({
   },
   registerMessage: {
     id: `${scope}.MessageRegister`,
-    defaultMessage: 'Don\'t have an account yet? {link} instead.',
+    defaultMessage: "Don't have an account yet? {link} instead.",
     description: 'A CTA message for the user to register',
   },
   registerMessageCTA: {
     id: `${scope}.MessageRegisterCTA`,
     defaultMessage: 'Register here',
     description: 'A CTA link for the user to register',
-  }
+  },
 });

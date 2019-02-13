@@ -12,10 +12,10 @@ describe('Recover', () => {
     ReactDOM.render(
       <IntlProvider {...intlProps}>
         <MemoryRouter>
-          <Route component={ Recover } />
+          <Route component={Recover} />
         </MemoryRouter>
       </IntlProvider>,
-      div
+      div,
     );
   });
 });

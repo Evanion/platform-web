@@ -47,5 +47,5 @@ export default defineMessages({
     id: `${scope}.fieldLabelEmail`,
     defaultMessage: 'Request reset',
     description: 'The pagetitle for ForgotPasswordForm',
-  }
+  },
 });

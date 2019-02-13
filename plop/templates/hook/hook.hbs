@@ -1,0 +1,12 @@
+{{#if type === 'State'}}
+interface Use{{pascalCase name}}State {
+  [key: string]: any;
+}
+
+export function use{{pascalCase name}}(defaultState: Use{{pascalCase name}}State) {
+  const [state:Use{{pascalCase name}}State, setState] = use{{type}}(defaultState);
+  return [state, setState]
+}
+{{/if}}
+
+$1

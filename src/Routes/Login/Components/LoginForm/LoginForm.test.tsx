@@ -12,11 +12,11 @@ describe('LoginForm', () => {
     const div = document.createElement('div');
     ReactDOM.render(
       <IntlProvider {...intlProps}>
-      <MemoryRouter>
+        <MemoryRouter>
           <LoginForm onSuccess={() => {}} />
         </MemoryRouter>
       </IntlProvider>,
-      div
+      div,
     );
   });
 });

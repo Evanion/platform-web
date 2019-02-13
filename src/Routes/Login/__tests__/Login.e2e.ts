@@ -7,15 +7,15 @@ let page: Page;
 const mockUser = {
   success: {
     email: 'test@testsson.se',
-    password: 'test22'
+    password: 'test22',
   },
   fail: {
     email: 'fail@testsson.se',
-    password: 'test22'
-  }
+    password: 'test22',
+  },
 };
 
-describe('Login Route E2E', () => {
+describe('Login E2E', () => {
   beforeEach(async () => {
     browser = await puppeteer.launch();
     page = await browser.newPage();
@@ -23,9 +23,9 @@ describe('Login Route E2E', () => {
     page.emulate({
       viewport: {
         width: 1920,
-        height: 1080
+        height: 1080,
       },
-      userAgent: ''
+      userAgent: '',
     });
   });
 

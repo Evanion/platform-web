@@ -7,5 +7,5 @@ export default defineMessages({
     id: `${scope}.PageTitle`,
     defaultMessage: 'Dashboard',
     description: 'The pagetitle for Dashboard',
-  }
+  },
 });

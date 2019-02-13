@@ -15,7 +15,7 @@ describe('<AuthRouteSwitch />', () => {
       <AuthRouteSwitch auth={true}>
         <Route to={'/protected'} component={TestComponent} />
         <Route to={'/protected2'} component={TestComponent} />
-      </AuthRouteSwitch>
+      </AuthRouteSwitch>,
     );
     expect(rendered).toMatchSnapshot();
   });

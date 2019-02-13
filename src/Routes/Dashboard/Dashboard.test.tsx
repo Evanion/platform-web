@@ -15,7 +15,7 @@ describe('<Dashboard />', () => {
           <Route component={Dashboard} />
         </MemoryRouter>
       </IntlProvider>,
-      div
+      div,
     );
   });
 });

@@ -27,7 +27,7 @@ const Register = (props: RouteComponentProps) => {
                 <Link to={ROUTEMAP.LOGIN}>
                   <FormattedMessage {...messages.loginMessageCTA} />
                 </Link>
-              )
+              ),
             }}
           />
         </Message>

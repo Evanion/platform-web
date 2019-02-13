@@ -27,7 +27,7 @@ class LoginForm extends React.Component<Props> {
     toastTitleSuccess: this.intl(messages.toastTitleSuccess),
     toastMessageSuccess: this.intl(messages.toastMessageSuccess),
     toastTitleError: this.intl(messages.toastTitleError),
-    toastMessageError: this.intl(messages.toastMessageError)
+    toastMessageError: this.intl(messages.toastMessageError),
   };
 
   private readonly validate = Yup.object().shape({
@@ -36,20 +36,20 @@ class LoginForm extends React.Component<Props> {
       .required(this.messages.validateEmailRequired),
     password: Yup.string()
       .min(6, this.messages.validatePasswordShort)
-      .required(this.messages.validatePasswordRequired)
+      .required(this.messages.validatePasswordRequired),
   });
 
   private readonly formSchema = {
     email: {
       type: 'email',
       required: true,
-      label: this.messages.fieldLabelEmail
+      label: this.messages.fieldLabelEmail,
     },
     password: {
       type: 'password',
       required: true,
-      label: this.messages.fieldLabelPassword
-    }
+      label: this.messages.fieldLabelPassword,
+    },
   };
 
   private readonly onSubmit = async (values: any, { setSubmitting }: any) => {
@@ -60,7 +60,7 @@ class LoginForm extends React.Component<Props> {
         title: this.messages.toastTitleSuccess,
         description: this.messages.toastMessageSuccess,
         icon: 'user',
-        type: 'success'
+        type: 'success',
       });
 
       this.props.onSuccess(result);
@@ -69,7 +69,7 @@ class LoginForm extends React.Component<Props> {
         title: this.messages.toastTitleError,
         description: this.messages.toastMessageError,
         icon: 'user',
-        type: 'error'
+        type: 'error',
       });
       if (typeof this.props.onError === 'function') {
         this.props.onError(error);

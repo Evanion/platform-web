@@ -1,5 +1,5 @@
 import React from 'react';
-import {MemoryRouter, Route} from 'react-router-dom';
+import { MemoryRouter, Route } from 'react-router-dom';
 import { IntlProvider } from 'react-intl';
 import { storiesOf } from '@storybook/react';
 import Register from './Register';
@@ -11,7 +11,7 @@ storiesOf('Routes/Register', module)
   .add('View', () => (
     <IntlProvider {...intlProps}>
       <MemoryRouter>
-        <Route component={Register}/>
+        <Route component={Register} />
       </MemoryRouter>
     </IntlProvider>
   ));

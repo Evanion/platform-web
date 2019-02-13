@@ -10,11 +10,13 @@ const NotFound = (props: RouteComponentProps) => {
   return (
     <div className="not-found-page">
       <div>
-        <Header icon style={{display:'block'}}>
+        <Header icon style={{ display: 'block' }}>
           <Icon name="search" />
           <FormattedMessage {...messages.title} />
         </Header>
-        <div><FormattedMessage {...messages.resourceNotFoundMessage} /></div>
+        <div>
+          <FormattedMessage {...messages.resourceNotFoundMessage} />
+        </div>
       </div>
     </div>
   );

@@ -1,2 +1,2 @@
 import LanguageProvider from './LanguageProvider';
-export default LanguageProvider
+export default LanguageProvider;

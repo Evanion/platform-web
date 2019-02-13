@@ -52,50 +52,50 @@ module.exports = function(plop) {
         default: false
       }
     ],
-    actions: choises => {
+    actions: ({i18n, scss, shared}) => {
       const actions = [
         {
           type: 'add',
-          path: choises.shared
+          path: shared
             ? 'src/Components/{{{pascalCase name}}}/index.ts'
             : 'src/Routes/{{parent}}/Components/{{{pascalCase name}}}/index.ts',
           templateFile: 'plop/templates/component/manifest.hbs'
         },
         {
           type: 'add',
-          path: choises.shared
+          path: shared
             ? 'src/Components/{{{pascalCase name}}}/{{{pascalCase name}}}.tsx'
             : 'src/Routes/{{parent}}/Components/{{{pascalCase name}}}/{{{pascalCase name}}}.tsx',
           templateFile: 'plop/templates/component/component.hbs'
         },
         {
           type: 'add',
-          path: choises.shared
+          path: shared
             ? 'src/Components/{{{pascalCase name}}}/{{{pascalCase name}}}.test.tsx'
             : 'src/Routes/{{parent}}/Components/{{{pascalCase name}}}/{{{pascalCase name}}}.test.tsx',
           templateFile: 'plop/templates/component/unittest.hbs'
         },
         {
           type: 'add',
-          path: choises.shared
+          path: shared
             ? 'src/Components/{{{pascalCase name}}}/{{{pascalCase name}}}.story.tsx'
             : 'src/Routes/{{parent}}/Components/{{{pascalCase name}}}/{{{pascalCase name}}}.story.tsx',
           templateFile: 'plop/templates/component/story.hbs'
         }
       ];
-      if (choises.scss) {
+      if (scss) {
         actions.push({
           type: 'add',
-          path: choises.shared
+          path: shared
             ? 'src/Components/{{{pascalCase name}}}/{{{pascalCase name}}}.scss'
             : 'src/Routes/{{parent}}/Components/{{{pascalCase name}}}/{{{pascalCase name}}}.scss',
           templateFile: 'plop/templates/component/stylesheet.hbs'
         });
       }
-      if (choises.i18n) {
+      if (i18n) {
         actions.push({
           type: 'add',
-          path: choises.shared
+          path: shared
             ? 'src/Components/{{{pascalCase name}}}/messages.ts'
             : 'src/Routes/{{parent}}/Components/{{{pascalCase name}}}/messages.ts',
           templateFile: 'plop/templates/component/messages.hbs'

@@ -31,7 +31,7 @@ const Login = (props: RouteComponentProps) => {
                 <Link to={ROUTEMAP.REGISTER}>
                   <FormattedMessage {...messages.registerMessageCTA} />
                 </Link>
-              )
+              ),
             }}
           />
         </Message>
