@@ -19,5 +19,5 @@ export const Locale = appLocales.includes(deviceLocale)
 
 export const messages = {
   en: formatTranslationMessages('en', enAppData),
-  sv: formatTranslationMessages('sv', svAppData)
+  sv: formatTranslationMessages('sv', svAppData),
 };

@@ -1,5 +1,8 @@
 import React from 'react';
-import { SemanticToastContainer, toast as trigger } from 'react-semantic-toasts';
+import {
+  SemanticToastContainer,
+  toast as trigger,
+} from 'react-semantic-toasts';
 import 'react-semantic-toasts/styles/react-semantic-alert.css';
 import { SemanticICONS } from 'semantic-ui-react';
 
@@ -18,15 +21,15 @@ interface Message {
 type cb = () => void;
 
 const defaultMessage = {
-  time: 5000
-}
+  time: 5000,
+};
 const ToastContainer = (props: Props) => {
-  return <SemanticToastContainer position="top-right" animation="fade left"/>;
+  return <SemanticToastContainer position="top-right" animation="fade left" />;
 };
 
 const toast = (message: Message, onClose?: cb, onClick?: cb) => {
-  trigger({...defaultMessage, ...message}, onClose, onClick);
-}
+  trigger({ ...defaultMessage, ...message }, onClose, onClick);
+};
 
 export default ToastContainer;
-export {toast}
+export { toast };

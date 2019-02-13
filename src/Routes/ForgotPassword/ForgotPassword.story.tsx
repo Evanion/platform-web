@@ -1,5 +1,5 @@
 import React from 'react';
-import {MemoryRouter, Route} from 'react-router-dom';
+import { MemoryRouter, Route } from 'react-router-dom';
 import { IntlProvider } from 'react-intl';
 import { storiesOf } from '@storybook/react';
 import ForgotPassword from './ForgotPassword';
@@ -11,7 +11,7 @@ storiesOf('Routes/ForgotPassword', module)
   .add('View', () => (
     <IntlProvider {...intlProps}>
       <MemoryRouter>
-        <Route component={ForgotPassword}/>
+        <Route component={ForgotPassword} />
       </MemoryRouter>
     </IntlProvider>
   ));

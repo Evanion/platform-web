@@ -12,7 +12,7 @@ describe('ForgotPasswordForm', () => {
     shallow(
       <IntlProvider {...intlProps}>
         <ForgotPasswordForm onSuccess={onSuccessSpy} />
-      </IntlProvider>
+      </IntlProvider>,
     );
   });
 });

@@ -1,5 +1,5 @@
 import React from 'react';
-import {MemoryRouter, Route} from 'react-router-dom';
+import { MemoryRouter, Route } from 'react-router-dom';
 import { IntlProvider } from 'react-intl';
 import { storiesOf } from '@storybook/react';
 import NotFound from './NotFound';
@@ -11,7 +11,7 @@ storiesOf('Routes/NotFound', module)
   .add('View', () => (
     <IntlProvider {...intlProps}>
       <MemoryRouter>
-        <Route component={NotFound}/>
+        <Route component={NotFound} />
       </MemoryRouter>
     </IntlProvider>
   ));

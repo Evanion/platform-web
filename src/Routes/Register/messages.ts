@@ -17,5 +17,5 @@ export default defineMessages({
     id: `${scope}.MessageLoginCTA`,
     defaultMessage: 'Login',
     description: 'A CTA link for the user to login',
-  }
+  },
 });

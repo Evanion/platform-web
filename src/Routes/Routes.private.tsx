@@ -22,20 +22,20 @@ const menuItems: MenuItem[] = [
     path: ROUTEMAP.HOME,
     type: 'logo',
     label: 'Platform',
-    key: 'logo'
+    key: 'logo',
   },
   {
     path: ROUTEMAP.ACCOUNT,
     type: 'link',
     label: 'Account',
-    key: 'account'
+    key: 'account',
   },
   {
     path: ROUTEMAP.LOGOUT,
     type: 'link',
     label: 'Logout',
-    key: 'logout'
-  }
+    key: 'logout',
+  },
 ];
 
 const PrivateRoutes = ({ location }: Props) => {
@@ -44,7 +44,7 @@ const PrivateRoutes = ({ location }: Props) => {
       <Redirect
         to={{
           pathname: ROUTEMAP.LOGIN,
-          state: { referrer: location }
+          state: { referrer: location },
         }}
       />
     );

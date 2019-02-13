@@ -10,7 +10,7 @@ module.exports = function(plop) {
         name: 'platform',
         message: 'What CI PLATFORM do you want to use?',
         validate: isRequired,
-        choices: ['Jenkins', 'CircleCI', 'TeamCity'],
+        choices: ['Jenkins', 'CircleCI', 'TeamCity', 'Travis CI'],
         default: 'Jenkins'
       }
     ],

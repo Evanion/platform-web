@@ -19,7 +19,7 @@ const AuthRouteSwitch = (props: Props) => {
         <Redirect
           to={{
             pathname: redirect,
-            state: { from: location }
+            state: { from: location },
           }}
         />
       )}

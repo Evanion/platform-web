@@ -12,10 +12,10 @@ describe('ForgotPassword', () => {
     ReactDOM.render(
       <IntlProvider {...intlProps}>
         <MemoryRouter>
-          <Route component={ ForgotPassword } />
+          <Route component={ForgotPassword} />
         </MemoryRouter>
       </IntlProvider>,
-      div
+      div,
     );
   });
 });

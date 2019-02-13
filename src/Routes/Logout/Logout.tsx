@@ -19,8 +19,8 @@ const Logout = ({ intl }: any) => {
         title: intl.formatMessage(messages.toastTitle),
         description: intl.formatMessage(messages.toastDescription),
         type: 'info',
-        icon: 'user delete'
-      })
+        icon: 'user delete',
+      }),
     );
   } finally {
     return <Redirect to={ROUTEMAP.HOME} />;

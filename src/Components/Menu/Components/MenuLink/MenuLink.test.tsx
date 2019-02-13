@@ -9,8 +9,8 @@ describe('MenuLink', () => {
     ReactDOM.render(
       <MemoryRouter>
         <MenuLink path={'/'} label={'test'} />
-      </MemoryRouter>, 
-      div
+      </MemoryRouter>,
+      div,
     );
   });
 });

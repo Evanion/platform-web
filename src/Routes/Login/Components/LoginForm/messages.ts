@@ -67,5 +67,5 @@ export default defineMessages({
     id: `${scope}.ValidatePasswordRequired`,
     defaultMessage: 'Password is required',
     description: 'The label for the login forms password recovery button',
-  }
+  },
 });

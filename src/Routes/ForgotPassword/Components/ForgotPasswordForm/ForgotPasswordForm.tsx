@@ -21,15 +21,15 @@ class ForgotPasswordForm extends React.Component<Props> {
   private readonly validate = Yup.object().shape({
     email: Yup.string()
       .email(this.intl(messages.validateEmailError))
-      .required(this.intl(messages.validateEmailRequired))
+      .required(this.intl(messages.validateEmailRequired)),
   });
 
   private readonly formSchema = {
     email: {
       type: 'email',
       required: true,
-      label: this.intl(messages.fieldLabelEmail)
-    }
+      label: this.intl(messages.fieldLabelEmail),
+    },
   };
 
   private readonly onSubmit = async (values: any, { setSubmitting }: any) => {
@@ -40,7 +40,7 @@ class ForgotPasswordForm extends React.Component<Props> {
         title: this.intl(messages.toastTitleSuccess),
         description: this.intl(messages.toastMessageSuccess),
         icon: 'user',
-        type: 'success'
+        type: 'success',
       });
 
       this.props.onSuccess(result);
@@ -49,7 +49,7 @@ class ForgotPasswordForm extends React.Component<Props> {
         title: this.intl(messages.toastTitleError),
         description: this.intl(messages.toastMessageError),
         icon: 'user',
-        type: 'error'
+        type: 'error',
       });
       if (typeof this.props.onError === 'function') {
         this.props.onError(error);

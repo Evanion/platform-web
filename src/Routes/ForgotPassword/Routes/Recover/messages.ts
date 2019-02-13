@@ -7,5 +7,5 @@ export default defineMessages({
     id: `${scope}.PageTitle`,
     defaultMessage: 'Recover',
     description: 'The pagetitle for Recover',
-  }
+  },
 });
