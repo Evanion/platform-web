@@ -47,9 +47,12 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 
 This project enforces Conventional commits. See [Conventional Commits specification](https://www.conventionalcommits.org/).
 
-In short:
 ```
+**Structure**
 <type>[optional scope]: <description>
+
+**Example**
+docs(tooling): added documentation on commit msg validation
 
 type = [
   'build',
