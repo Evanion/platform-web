@@ -42,3 +42,40 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+## Commit Message Convention
+[![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
+
+This project enforces Conventional commits. See [Conventional Commits specification](https://www.conventionalcommits.org/).
+
+
+### Structure ###
+```
+<type>[optional scope]: <description>
+```
+
+### Examples ###
+```
+docs: corrected spelling errors in README
+
+fix(auth): fixed bug in password validation
+
+perf(login): improved page load time on login
+```
+
+### Available types ###
+```
+type = [
+  'build',
+  'ci',
+  'chore',
+  'docs',
+  'feat',
+  'fix',
+  'perf',
+  'refactor',
+  'revert',
+  'style',
+  'test'
+]
+```
