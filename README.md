@@ -47,13 +47,23 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 
 This project enforces Conventional commits. See [Conventional Commits specification](https://www.conventionalcommits.org/).
 
+
+### Structure ###
 ```
-**Structure**
 <type>[optional scope]: <description>
+```
 
-**Example**
-docs(tooling): added documentation on commit msg validation
+### Examples ###
+```
+docs: corrected spelling errors in README
 
+fix(auth): fixed bug in password validation
+
+perf(login): improved page load time on login
+```
+
+### Available types ###
+```
 type = [
   'build',
   'ci',
